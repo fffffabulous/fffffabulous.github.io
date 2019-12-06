@@ -17,15 +17,18 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>归档: 2019 | fffffabulous</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="fffffabulous">
-<meta property="og:url" content="http:&#x2F;&#x2F;fffffabulous.github.io&#x2F;archives&#x2F;2019&#x2F;index.html">
+  <title>HTTP | fffffabulous</title>
+  <meta name="description" content="电脑通信靠IP地址，IP地址记不住就发明了域名（domain name），然后电脑 自动向DNS服务器（domain name server）查询域名对应的IP地址  比如g.cn这样的网址，可以通过电脑的ping程序查出对应 IP 地址 ➜    ping g.cn PING g.cn (203.208.41.55): 56 data bytes    端口是什么？ 一个比喻： 用邮局互相写信的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTTP">
+<meta property="og:url" content="http:&#x2F;&#x2F;fffffabulous.github.io&#x2F;2018&#x2F;03&#x2F;07&#x2F;js&#x2F;index.html">
 <meta property="og:site_name" content="fffffabulous">
+<meta property="og:description" content="电脑通信靠IP地址，IP地址记不住就发明了域名（domain name），然后电脑 自动向DNS服务器（domain name server）查询域名对应的IP地址  比如g.cn这样的网址，可以通过电脑的ping程序查出对应 IP 地址 ➜    ping g.cn PING g.cn (203.208.41.55): 56 data bytes    端口是什么？ 一个比喻： 用邮局互相写信的">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-06T17:00:01.302Z">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://fffffabulous.github.io/archives/2019/index.html">
+  <link rel="canonical" href="http://fffffabulous.github.io/2018/03/07/js/index.html">
   
     <link rel="alternate" href="/atom.xml" title="fffffabulous" type="application/atom+xml">
   
@@ -319,58 +322,232 @@
   
   
 <main class="main" role="main">
-  	<article class="content article article-archives article-type-list" itemscope="">
-	    <header class="article-header">
-	      <h1 itemprop="title">归档: 2019</h1>
-	      <p class="text-muted">共 2 篇文章</p>
-	    </header>
-	    <div class="article-body">
-	      
+  <div class="content">
+  <article id="post-js" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
   
+    <h1 class="article-title" itemprop="name">
+      HTTP
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2018/03/07/js/" class="article-date">
+	  <time datetime="2018-03-06T16:51:20.000Z" itemprop="datePublished">2018-03-07</time>
+	</a>
+</span>
+        
+        
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2018/03/07/js/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <pre><code class="bash">电脑通信靠IP地址，IP地址记不住就发明了域名（domain name），然后电脑
+自动向DNS服务器（domain name server）查询域名对应的IP地址
+
+比如g.cn这样的网址，可以通过电脑的ping程序查出对应 IP 地址
+➜    ping g.cn
+PING g.cn (203.208.41.55): 56 data bytes
+
+
+
+端口是什么？
+一个比喻：
+用邮局互相写信的时候，ip相当于地址（也可以看做邮编，地址是域名）
+端口是收信人姓名（因为一个地址比如公司、家只有一个地址，但是却可能有很多收信人）
+端口就是一个标记收信人的数字。
+端口是一个 16 位的数字，所以范围是 0-65535（2**16）
+安全程度：Linux &gt; Mac &gt;&gt; Windows,
+         iPhone &gt;&gt; Android
+
+
+
+——HTTP协议——
+
+一个传输协议，协议就是双方都遵守的规范。
+为什么叫超文本传输协议呢，因为收发的是文本信息。
+1，浏览器（客户端）按照规定的格式发送文本数据（请求）到服务器
+2，服务器解析请求，按照规定的格式返回文本数据（响应）到浏览器
+3，浏览器解析得到的数据（响应），并做相应处理
+
+
+请求和响应是一样的数据格式，分为 4 部分：
+1，请求行或者响应行
+2，Header（请求的 Header 中 Host 字段是必须的，其他都是可选）
+3，\r\n\r\n（连续两个换行回车符，用来分隔Header和Body）
+4，Body（可选）
+
+请求的格式，注意大小写（这是一个不包含Body的请求）：
+原始数据如下
+<span class="string">'GET / HTTP/1.1\r\nhost:g.cn\r\n\r\n'</span>
+打印出来如下
+GET / HTTP/1.1
+host: g.cn
+
+其中
+1， GET 是请求方法（还有POST等，这就是个标志字符串而已）
+2，/ 是请求的路径（这代表根路径）
+3，HTTP/1.1 中，1.1是版本号，通用了20年
+
+具体字符串是 <span class="string">'GET / HTTP/1.1\r\nhost:g.cn\r\n\r\n'</span>
+
+
+返回的数据(响应)如下
+HTTP/1.1 301 Moved Permanently
+Alternate-Protocol: 80:quic,p=0,80:quic,p=0
+Cache-Control: private, max-age=2592000
+Content-Length: 218
+Content-Type: text/html; charset=UTF-8
+Date: Tue, 07 Jul 2015 02:57:59 GMT
+Expires: Tue, 07 Jul 2015 02:57:59 GMT
+Location: http://www.google.cn/
+Server: gws
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+
+
+</code></pre>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://fffffabulous.github.io/2018/03/07/js/" title="HTTP" target="_blank" rel="external">http://fffffabulous.github.io/2018/03/07/js/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/fffffabulous" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/fffffabulous" target="_blank"><span class="text-dark">fffffabulous</span><small class="ml-1x">Web Developer &amp; Designer</small></a></h3>
+        <div>个人简介。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
   
     
+  <section id="comments">
+  	
+           
     
-      
-      
-      <section class="panel panel-default b-no">
-        <div class="panel-heading" role="tab">
-          <h3 class="panel-title">
-            <a data-toggle="collapse" href="#collapse2019" aria-expanded="true">
-              <i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>
-              2019
-            </a>
-            <!-- <a href="/archives/2019" class="archive-year">2019</a> -->
-          </h3>
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2018/11/06/code/" title="git生成ssh秘钥"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.jpg" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div id="collapse2019" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2019">
-        <div class="panel-body">
-          <div class="collection">
-    
-    
-<a href="/2019/12/07/ajax/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2019-12-06T17:01:19.000Z" itemprop="datePublished">2019-12-07</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> AJAX的使用与封装
-</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-  
-    
-    
-    
-<a href="/2019/12/06/hello-world/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2019-12-06T03:24:46.747Z" itemprop="datePublished">2019-12-06</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> Hello World
-</a>
 
-
-  
-  
-    </div></div></div></section>
-  
-
-	    </div>
-  	</article>
-  	 	
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -425,6 +602,33 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+    
+  <!-- <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"> -->
+  <script src="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    id: md5(location.pathname),
+    distractionFreeMode: true
+  })
+  gitalk.render('comments')
+  </script>
+
+      
 
 
 

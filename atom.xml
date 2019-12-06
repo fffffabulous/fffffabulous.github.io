@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>fffffabulous</title>
   
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://fffffabulous.github.io/"/>
-  <updated>2019-12-06T03:24:46.747Z</updated>
+  <updated>2019-12-06T17:08:46.733Z</updated>
   <id>http://fffffabulous.github.io/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>AJAX的使用与封装</title>
+    <link href="http://fffffabulous.github.io/2019/12/07/ajax/"/>
+    <id>http://fffffabulous.github.io/2019/12/07/ajax/</id>
+    <published>2019-12-06T17:01:19.000Z</published>
+    <updated>2019-12-06T17:08:46.733Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code class="bash">// AJAX 和使用方法// ajax 就是浏览器提供的用 js 获取链接内容的 API// 可以理解为发送网络请求的标准库// 获取登录页面// 创建 AJAX 对象<span class="built_in">let</span> r = new XMLHttpRequest()// 设置请求方法和请求地址r.open(<span class="string">'GET'</span>, <span class="string">'/login'</span>, <span class="literal">true</span>)// 注册响应函数r.onreadystatechange = <span class="function"><span class="title">function</span></span>() {    console.log(<span class="string">'state change'</span>, r)}// 发送请求r.send()// 发送登录数据<span class="built_in">let</span> r = new XMLHttpRequest()// 设置请求方法和请求地址r.open(<span class="string">'POST'</span>, <span class="string">'/api/user/login'</span>, <span class="literal">true</span>)// 设置发送的数据的格式r.setRequestHeader(<span class="string">'Content-Type'</span>, <span class="string">'application/json'</span>)// 注册响应函数r.onreadystatechange = <span class="function"><span class="title">function</span></span>() {    <span class="keyword">if</span> (r.readyState === 4) {        console.log(<span class="string">'state change'</span>, r, r.status, r.response)        <span class="built_in">let</span> response = JSON.parse(r.response)        console.log(<span class="string">'response'</span>, response)    } <span class="keyword">else</span> {        console.log(<span class="string">'change'</span>)    }}// 发送请求<span class="built_in">let</span> account = {    phone: <span class="string">'gua'</span>,    password: <span class="string">'123'</span>,}<span class="built_in">let</span> data = JSON.stringify(account)r.send(data)// 可以封装成这样的一个函数const ajax = (method, path, data, responseCallback) =&gt; {    // 发送登录数据    <span class="built_in">let</span> r = new XMLHttpRequest()    // 设置请求方法和请求地址    r.open(method, path, <span class="literal">true</span>)    // 设置发送的数据的格式    r.setRequestHeader(<span class="string">'Content-Type'</span>, <span class="string">'application/json'</span>)    // 注册响应函数    r.onreadystatechange = <span class="function"><span class="title">function</span></span>() {        <span class="keyword">if</span> (r.readyState === 4) {            // console.log(<span class="string">'state change'</span>, r, r.status, r.response)            // <span class="built_in">let</span> response = JSON.parse(r.response)            // console.log(<span class="string">'response'</span>, response)            responseCallback(r.response)        } <span class="keyword">else</span> {            console.log(<span class="string">'change'</span>)        }    }    r.send(data)}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;// AJAX 和使用方法
+// ajax 就是浏览器提供的用 js 获取链接内容的 API
+// 可以理解为发送网络请求的标准库
+// 获取登录页面
+// 创建 AJAX 对象
+&lt;span class=&quot;built_in&quot;&gt;let
+      
+    
+    </summary>
+    
+    
+    
+      <category term="AJAX" scheme="http://fffffabulous.github.io/tags/AJAX/"/>
+    
+      <category term="封装" scheme="http://fffffabulous.github.io/tags/%E5%B0%81%E8%A3%85/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="http://fffffabulous.github.io/2019/12/06/hello-world/"/>
     <id>http://fffffabulous.github.io/2019/12/06/hello-world/</id>
     <published>2019-12-06T03:24:46.747Z</published>
-    <updated>2019-12-06T03:24:46.747Z</updated>
+    <updated>2019-12-06T14:58:38.353Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo server</span></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo generate</span></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     
@@ -30,6 +61,60 @@
       
       
         &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>git生成ssh秘钥</title>
+    <link href="http://fffffabulous.github.io/2018/11/06/code/"/>
+    <id>http://fffffabulous.github.io/2018/11/06/code/</id>
+    <published>2018-11-06T12:48:44.000Z</published>
+    <updated>2019-12-06T16:47:36.901Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code class="bash">// 查看是否存在秘钥$ <span class="built_in">cd</span> ~/.ssh// 配置用户相关信息$ git config –-global user.name ‘xxxxx’$ git config –-global user.email ‘xxx@xx.xxx’// 查看用户配置的相关信息$ git config user.name$ git config user.email// 生成秘钥 (邮箱为上方配置的邮箱)$ ssh-keygen -t rsa -C ‘xxx@xx.xxx’// 连按三个空格Generating public/private rsa key pair.Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/c/Users/Mr.Yang/.ssh/id_rsa):Enter passphrase (empty <span class="keyword">for</span> no passphrase):Enter same passphrase again:Your identification has been saved <span class="keyword">in</span> /c/Users/Mr.Yang/.ssh/id_rsa.Your public key has been saved <span class="keyword">in</span> /c/Users/Mr.Yang/.ssh/id_rsa.pub.The key fingerprint is:SHA256:zA6wNJrFB6NcqS6eBog/AHlzQuvFjYpG759Yhh1lWGI xxxxxx@xxxxx.xxx(上面自己的邮箱)The key<span class="string">"s randomart image is:</span><span class="string">+---[RSA 2048]----+</span><span class="string">|    +E .         |</span><span class="string">| ..+oo+          |</span><span class="string">| oo+*+.o         |</span><span class="string">|o.*===+o         |</span><span class="string">|==+*... S        |</span><span class="string">|B.+.o .o         |</span><span class="string">|++o. +  .        |</span><span class="string">| +o.+ .          |</span><span class="string">|.  o.o           |</span><span class="string">+----[SHA256]-----+</span></code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;// 查看是否存在秘钥
+$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; ~/.ssh
+
+// 配置用户相关信息
+$ git config –-global user.name ‘xxxxx’
+$ git con
+      
+    
+    </summary>
+    
+    
+    
+      <category term="SSH" scheme="http://fffffabulous.github.io/tags/SSH/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTTP</title>
+    <link href="http://fffffabulous.github.io/2018/03/07/js/"/>
+    <id>http://fffffabulous.github.io/2018/03/07/js/</id>
+    <published>2018-03-06T16:51:20.000Z</published>
+    <updated>2019-12-06T17:00:01.302Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code class="bash">电脑通信靠IP地址，IP地址记不住就发明了域名（domain name），然后电脑自动向DNS服务器（domain name server）查询域名对应的IP地址比如g.cn这样的网址，可以通过电脑的ping程序查出对应 IP 地址➜    ping g.cnPING g.cn (203.208.41.55): 56 data bytes端口是什么？一个比喻：用邮局互相写信的时候，ip相当于地址（也可以看做邮编，地址是域名）端口是收信人姓名（因为一个地址比如公司、家只有一个地址，但是却可能有很多收信人）端口就是一个标记收信人的数字。端口是一个 16 位的数字，所以范围是 0-65535（2**16）安全程度：Linux &gt; Mac &gt;&gt; Windows,         iPhone &gt;&gt; Android——HTTP协议——一个传输协议，协议就是双方都遵守的规范。为什么叫超文本传输协议呢，因为收发的是文本信息。1，浏览器（客户端）按照规定的格式发送文本数据（请求）到服务器2，服务器解析请求，按照规定的格式返回文本数据（响应）到浏览器3，浏览器解析得到的数据（响应），并做相应处理请求和响应是一样的数据格式，分为 4 部分：1，请求行或者响应行2，Header（请求的 Header 中 Host 字段是必须的，其他都是可选）3，\r\n\r\n（连续两个换行回车符，用来分隔Header和Body）4，Body（可选）请求的格式，注意大小写（这是一个不包含Body的请求）：原始数据如下<span class="string">'GET / HTTP/1.1\r\nhost:g.cn\r\n\r\n'</span>打印出来如下GET / HTTP/1.1host: g.cn其中1， GET 是请求方法（还有POST等，这就是个标志字符串而已）2，/ 是请求的路径（这代表根路径）3，HTTP/1.1 中，1.1是版本号，通用了20年具体字符串是 <span class="string">'GET / HTTP/1.1\r\nhost:g.cn\r\n\r\n'</span>返回的数据(响应)如下HTTP/1.1 301 Moved PermanentlyAlternate-Protocol: 80:quic,p=0,80:quic,p=0Cache-Control: private, max-age=2592000Content-Length: 218Content-Type: text/html; charset=UTF-8Date: Tue, 07 Jul 2015 02:57:59 GMTExpires: Tue, 07 Jul 2015 02:57:59 GMTLocation: http://www.google.cn/Server: gwsX-Frame-Options: SAMEORIGINX-XSS-Protection: 1; mode=block</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;电脑通信靠IP地址，IP地址记不住就发明了域名（domain name），然后电脑
+自动向DNS服务器（domain name server）查询域名对应的IP地址
+
+比如g.cn这样的网址，可以通过电脑的ping程序查出对应 IP
       
     
     </summary>
