@@ -17,19 +17,19 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>AJAX的使用与封装 | fffffabulous</title>
-  <meta name="description" content="&#x2F;&#x2F; AJAX 和使用方法 &#x2F;&#x2F; ajax 就是浏览器提供的用 js 获取链接内容的 API &#x2F;&#x2F; 可以理解为发送网络请求的标准库 &#x2F;&#x2F; 获取登录页面 &#x2F;&#x2F; 创建 AJAX 对象 let r &#x3D; new XMLHttpRequest() &#x2F;&#x2F; 设置请求方法和请求地址 r.open(&amp;apos;GET&amp;apos;, &amp;apos;&#x2F;login&amp;apos;, true) &#x2F;&#x2F; 注册响应函数 r.onreadystatechange &#x3D; fun">
-<meta name="keywords" content="AJAX,封装">
+  <title>javascript 原型链 | fffffabulous</title>
+  <meta name="description" content="原型链   每个对象都可以有一个原型_proto_，这个原型还可以有它自己的原型， 以此类推，形成一个原型链。查找特定属性的时候，我们先去这个对象里去找， 如果没有的话就去它的原型对象里面去，如果还是没有的话再去向原型对象的原型对象里去寻找......  这个操作被委托在整个原型链上，这个就是我们说的原型链了。prototype:     prototype属性，它是函数所独有的，它是从一个函数指">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AJAX的使用与封装">
-<meta property="og:url" content="http:&#x2F;&#x2F;fffffabulous.github.io&#x2F;2019&#x2F;12&#x2F;07&#x2F;ajax&#x2F;index.html">
+<meta property="og:title" content="javascript 原型链">
+<meta property="og:url" content="http:&#x2F;&#x2F;fffffabulous.github.io&#x2F;2018&#x2F;10&#x2F;07&#x2F;photo&#x2F;index.html">
 <meta property="og:site_name" content="fffffabulous">
-<meta property="og:description" content="&#x2F;&#x2F; AJAX 和使用方法 &#x2F;&#x2F; ajax 就是浏览器提供的用 js 获取链接内容的 API &#x2F;&#x2F; 可以理解为发送网络请求的标准库 &#x2F;&#x2F; 获取登录页面 &#x2F;&#x2F; 创建 AJAX 对象 let r &#x3D; new XMLHttpRequest() &#x2F;&#x2F; 设置请求方法和请求地址 r.open(&amp;apos;GET&amp;apos;, &amp;apos;&#x2F;login&amp;apos;, true) &#x2F;&#x2F; 注册响应函数 r.onreadystatechange &#x3D; fun">
+<meta property="og:description" content="原型链   每个对象都可以有一个原型_proto_，这个原型还可以有它自己的原型， 以此类推，形成一个原型链。查找特定属性的时候，我们先去这个对象里去找， 如果没有的话就去它的原型对象里面去，如果还是没有的话再去向原型对象的原型对象里去寻找......  这个操作被委托在整个原型链上，这个就是我们说的原型链了。prototype:     prototype属性，它是函数所独有的，它是从一个函数指">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-06T17:08:46.733Z">
+<meta property="og:updated_time" content="2019-12-06T20:35:57.904Z">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://fffffabulous.github.io/2019/12/07/ajax/index.html">
+  <link rel="canonical" href="http://fffffabulous.github.io/2018/10/07/photo/index.html">
   
     <link rel="alternate" href="/atom.xml" title="fffffabulous" type="application/atom+xml">
   
@@ -214,13 +214,20 @@
 
     
       
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/mac/">mac</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/%E5%87%BD%E6%95%B0/">函数</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BD%91%E7%BB%9C/">网络</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
 
     
       
   <div class="widget">
     <h3 class="widget-title">标签</h3>
     <div class="widget-body">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AJAX/" rel="tag">AJAX</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/" rel="tag">SSH</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%81%E8%A3%85/" rel="tag">封装</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AJAX/" rel="tag">AJAX</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTP/" rel="tag">HTTP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/" rel="tag">SSH</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/" rel="tag">mac</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%81%E8%A3%85/" rel="tag">封装</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -230,7 +237,7 @@
   <div class="widget">
     <h3 class="widget-title">标签云</h3>
     <div class="widget-body tagcloud">
-      <a href="/tags/AJAX/" style="font-size: 13px;">AJAX</a> <a href="/tags/SSH/" style="font-size: 13px;">SSH</a> <a href="/tags/%E5%B0%81%E8%A3%85/" style="font-size: 13px;">封装</a>
+      <a href="/tags/AJAX/" style="font-size: 13px;">AJAX</a> <a href="/tags/HTTP/" style="font-size: 13px;">HTTP</a> <a href="/tags/JavaScript/" style="font-size: 14px;">JavaScript</a> <a href="/tags/SSH/" style="font-size: 13px;">SSH</a> <a href="/tags/mac/" style="font-size: 13px;">mac</a> <a href="/tags/%E5%B0%81%E8%A3%85/" style="font-size: 13.5px;">封装</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 13px;">算法</a>
     </div>
   </div>
 
@@ -239,7 +246,7 @@
   <div class="widget">
     <h3 class="widget-title">归档</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -255,13 +262,13 @@
             
             <div class="item-inner">
               <p class="item-category">
-                
+                <a class="category-link" href="/categories/mac/">mac</a>
               </p>
               <p class="item-title">
-                <a href="/2019/12/07/ajax/" class="title">AJAX的使用与封装</a>
+                <a href="/2019/04/07/my/" class="title">Mac系统常用快捷键</a>
               </p>
               <p class="item-date">
-                <time datetime="2019-12-06T17:01:19.000Z" itemprop="datePublished">2019-12-07</time>
+                <time datetime="2019-04-06T17:59:26.000Z" itemprop="datePublished">2019-04-07</time>
               </p>
             </div>
           </li>
@@ -270,13 +277,13 @@
             
             <div class="item-inner">
               <p class="item-category">
-                
+                <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><i class="icon icon-angle-right"></i><a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/%E5%87%BD%E6%95%B0/">函数</a>
               </p>
               <p class="item-title">
-                <a href="/2019/12/06/hello-world/" class="title">Hello World</a>
+                <a href="/2019/01/06/hello-world/" class="title">函数防抖、函数节流</a>
               </p>
               <p class="item-date">
-                <time datetime="2019-12-06T03:24:46.747Z" itemprop="datePublished">2019-12-06</time>
+                <time datetime="2019-01-06T12:48:44.000Z" itemprop="datePublished">2019-01-06</time>
               </p>
             </div>
           </li>
@@ -285,7 +292,7 @@
             
             <div class="item-inner">
               <p class="item-category">
-                
+                <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
               </p>
               <p class="item-title">
                 <a href="/2018/11/06/code/" class="title">git生成ssh秘钥</a>
@@ -300,13 +307,28 @@
             
             <div class="item-inner">
               <p class="item-category">
-                
+                <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
               </p>
               <p class="item-title">
-                <a href="/2018/03/07/js/" class="title">HTTP</a>
+                <a href="/2018/10/07/photo/" class="title">javascript 原型链</a>
               </p>
               <p class="item-date">
-                <time datetime="2018-03-06T16:51:20.000Z" itemprop="datePublished">2018-03-07</time>
+                <time datetime="2018-10-06T19:30:05.000Z" itemprop="datePublished">2018-10-07</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+              </p>
+              <p class="item-title">
+                <a href="/2018/09/07/ajax/" class="title">AJAX的使用与封装</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2018-09-06T17:01:19.000Z" itemprop="datePublished">2018-09-07</time>
               </p>
             </div>
           </li>
@@ -324,14 +346,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-ajax" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-photo" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      AJAX的使用与封装
+      javascript 原型链
     </h1>
   
 
@@ -339,15 +361,20 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2019/12/07/ajax/" class="article-date">
-	  <time datetime="2019-12-06T17:01:19.000Z" itemprop="datePublished">2019-12-07</time>
+	<a href="/2018/10/07/photo/" class="article-date">
+	  <time datetime="2018-10-06T19:30:05.000Z" itemprop="datePublished">2018-10-07</time>
 	</a>
 </span>
         
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+  </span>
+
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/AJAX/" rel="tag">AJAX</a>, <a class="article-tag-link" href="/tags/%E5%B0%81%E8%A3%85/" rel="tag">封装</a>
+	<a class="article-tag-link" href="/tags/JavaScript/" rel="tag">JavaScript</a>
   </span>
 
 
@@ -360,75 +387,28 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/12/07/ajax/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2018/10/07/photo/#comments" class="article-comment-link">评论</a></span>
         
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <pre><code class="bash">// AJAX 和使用方法
-// ajax 就是浏览器提供的用 js 获取链接内容的 API
-// 可以理解为发送网络请求的标准库
-// 获取登录页面
-// 创建 AJAX 对象
-<span class="built_in">let</span> r = new XMLHttpRequest()
-// 设置请求方法和请求地址
-r.open(<span class="string">'GET'</span>, <span class="string">'/login'</span>, <span class="literal">true</span>)
-// 注册响应函数
-r.onreadystatechange = <span class="function"><span class="title">function</span></span>() {
-    console.log(<span class="string">'state change'</span>, r)
-}
-// 发送请求
-r.send()
-
-
-
-// 发送登录数据
-<span class="built_in">let</span> r = new XMLHttpRequest()
-// 设置请求方法和请求地址
-r.open(<span class="string">'POST'</span>, <span class="string">'/api/user/login'</span>, <span class="literal">true</span>)
-// 设置发送的数据的格式
-r.setRequestHeader(<span class="string">'Content-Type'</span>, <span class="string">'application/json'</span>)
-// 注册响应函数
-r.onreadystatechange = <span class="function"><span class="title">function</span></span>() {
-    <span class="keyword">if</span> (r.readyState === 4) {
-        console.log(<span class="string">'state change'</span>, r, r.status, r.response)
-        <span class="built_in">let</span> response = JSON.parse(r.response)
-        console.log(<span class="string">'response'</span>, response)
-    } <span class="keyword">else</span> {
-        console.log(<span class="string">'change'</span>)
-    }
-}
-// 发送请求
-<span class="built_in">let</span> account = {
-    phone: <span class="string">'gua'</span>,
-    password: <span class="string">'123'</span>,
-}
-<span class="built_in">let</span> data = JSON.stringify(account)
-r.send(data)
-
-
-// 可以封装成这样的一个函数
-const ajax = (method, path, data, responseCallback) =&gt; {
-    // 发送登录数据
-    <span class="built_in">let</span> r = new XMLHttpRequest()
-    // 设置请求方法和请求地址
-    r.open(method, path, <span class="literal">true</span>)
-    // 设置发送的数据的格式
-    r.setRequestHeader(<span class="string">'Content-Type'</span>, <span class="string">'application/json'</span>)
-    // 注册响应函数
-    r.onreadystatechange = <span class="function"><span class="title">function</span></span>() {
-        <span class="keyword">if</span> (r.readyState === 4) {
-            // console.log(<span class="string">'state change'</span>, r, r.status, r.response)
-            // <span class="built_in">let</span> response = JSON.parse(r.response)
-            // console.log(<span class="string">'response'</span>, response)
-            responseCallback(r.response)
-        } <span class="keyword">else</span> {
-            console.log(<span class="string">'change'</span>)
-        }
-    }
-    r.send(data)
-}</code></pre>
+        <h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><pre><code>   每个对象都可以有一个原型_proto_，这个原型还可以有它自己的原型，
+以此类推，形成一个原型链。查找特定属性的时候，我们先去这个对象里去找，
+如果没有的话就去它的原型对象里面去，如果还是没有的话再去向原型对象的原型对象里去寻找...... 
+这个操作被委托在整个原型链上，这个就是我们说的原型链了。</code></pre><p><strong>prototype:</strong></p>
+<pre><code class="bash">    prototype属性，它是函数所独有的，它是从一个函数指向一个对象。它的含义是函数的
+原型对象，也就是这个函数（其实所有函数都可以作为构造函数）所创建的实例的原型对象; 
+这个属性是一个指针，指向一个对象，这个对象的用途就是包含所有实例共享的属性和方法（我
+们把这个对象叫做原型对象</code></pre>
+<p><strong><strong>_proto</strong>:</strong></p>
+<pre><code class="bash">__proto__ 是原型链查询中实际用到的，它总是指向 prototype，换句话说就是指向构造函
+数的原型对象，它是对象独有的。注意，为什么Foo构造也有这个属性呢，因为再js的宇宙里万
+物皆对象，包括函数；</code></pre>
+<p><strong>constructor:</strong></p>
+<pre><code class="bash">每个函数都有一个原型对象，该原型对象有一个constructor属性，指向创建对象的函数本身。</code></pre>
+<p><strong>结论:</strong><br>     1、<strong>_proto</strong> 是原型链查询中实际用到的，它总是指向 prototype；<br>     2、prototype 是函数所独有的，在定义构造函数时自动创建，它总是被 <strong>proto</strong> 所指。</p>
+<p>所有对象都有<strong>proto</strong>属性，函数这个特殊对象除了具有<strong>proto</strong>属性，还有特有的原型属性prototype。prototype对象默认有两个属性，constructor属性和<strong>proto</strong>属性。prototype属性可以给函数和对象添加可共享（继承）的方法、属性，而<strong>proto</strong>是查找某函数或对象的原型链方式。constructor，这个属性包含了一个指针，指回原构造函数。</p>
 
       
     </div>
@@ -438,7 +418,7 @@ const ajax = (method, path, data, responseCallback) =&gt; {
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://fffffabulous.github.io/2019/12/07/ajax/" title="AJAX的使用与封装" target="_blank" rel="external">http://fffffabulous.github.io/2019/12/07/ajax/</a>
+      <a href="http://fffffabulous.github.io/2018/10/07/photo/" title="javascript 原型链" target="_blank" rel="external">http://fffffabulous.github.io/2018/10/07/photo/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -484,9 +464,13 @@ const ajax = (method, path, data, responseCallback) =&gt; {
   
   <ul class="pager pull-left">
     
+    <li class="prev">
+      <a href="/2018/11/06/code/" title="git生成ssh秘钥"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
     
     <li class="next">
-      <a href="/2019/12/06/hello-world/" title="Hello World"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2018/09/07/ajax/" title="AJAX的使用与封装"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     

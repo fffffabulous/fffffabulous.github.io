@@ -2,23 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://fffffabulous.github.io/2019/12/07/ajax/</loc>
+    <loc>http://fffffabulous.github.io/2018/10/07/photo/</loc>
     
-    <lastmod>2019-12-06T17:08:46.733Z</lastmod>
+    <lastmod>2019-12-06T20:35:57.904Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://fffffabulous.github.io/2018/03/07/js/</loc>
+    <loc>http://fffffabulous.github.io/2019/04/07/my/</loc>
     
-    <lastmod>2019-12-06T17:00:01.302Z</lastmod>
+    <lastmod>2019-12-06T20:17:44.100Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://fffffabulous.github.io/2018/09/07/func/</loc>
+    
+    <lastmod>2019-12-06T19:29:19.617Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://fffffabulous.github.io/2019/01/06/hello-world/</loc>
+    
+    <lastmod>2019-12-06T18:49:25.674Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://fffffabulous.github.io/2018/11/06/code/</loc>
     
-    <lastmod>2019-12-06T16:47:36.901Z</lastmod>
+    <lastmod>2019-12-06T17:58:23.648Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://fffffabulous.github.io/2018/09/07/ajax/</loc>
+    
+    <lastmod>2019-12-06T17:57:52.631Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://fffffabulous.github.io/2018/03/07/js/</loc>
+    
+    <lastmod>2019-12-06T17:57:04.736Z</lastmod>
     
   </url>
   
@@ -26,13 +54,6 @@
     <loc>http://fffffabulous.github.io/about/index.html</loc>
     
     <lastmod>2019-12-06T16:44:50.378Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://fffffabulous.github.io/2019/12/06/hello-world/</loc>
-    
-    <lastmod>2019-12-06T14:58:38.353Z</lastmod>
     
   </url>
   
@@ -47,13 +68,6 @@
     <loc>http://fffffabulous.github.io/books/index.html</loc>
     
     <lastmod>2019-12-06T14:01:16.605Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://fffffabulous.github.io/categories/index.html</loc>
-    
-    <lastmod>2019-12-06T13:46:15.645Z</lastmod>
     
   </url>
   

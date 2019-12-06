@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://fffffabulous.github.io/"/>
-  <updated>2019-12-06T17:08:46.733Z</updated>
+  <updated>2019-12-06T20:17:44.100Z</updated>
   <id>http://fffffabulous.github.io/</id>
   
   <author>
@@ -17,55 +17,57 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>AJAX的使用与封装</title>
-    <link href="http://fffffabulous.github.io/2019/12/07/ajax/"/>
-    <id>http://fffffabulous.github.io/2019/12/07/ajax/</id>
-    <published>2019-12-06T17:01:19.000Z</published>
-    <updated>2019-12-06T17:08:46.733Z</updated>
+    <title>Mac系统常用快捷键</title>
+    <link href="http://fffffabulous.github.io/2019/04/07/my/"/>
+    <id>http://fffffabulous.github.io/2019/04/07/my/</id>
+    <published>2019-04-06T17:59:26.000Z</published>
+    <updated>2019-12-06T20:17:44.100Z</updated>
     
-    <content type="html"><![CDATA[<pre><code class="bash">// AJAX 和使用方法// ajax 就是浏览器提供的用 js 获取链接内容的 API// 可以理解为发送网络请求的标准库// 获取登录页面// 创建 AJAX 对象<span class="built_in">let</span> r = new XMLHttpRequest()// 设置请求方法和请求地址r.open(<span class="string">'GET'</span>, <span class="string">'/login'</span>, <span class="literal">true</span>)// 注册响应函数r.onreadystatechange = <span class="function"><span class="title">function</span></span>() {    console.log(<span class="string">'state change'</span>, r)}// 发送请求r.send()// 发送登录数据<span class="built_in">let</span> r = new XMLHttpRequest()// 设置请求方法和请求地址r.open(<span class="string">'POST'</span>, <span class="string">'/api/user/login'</span>, <span class="literal">true</span>)// 设置发送的数据的格式r.setRequestHeader(<span class="string">'Content-Type'</span>, <span class="string">'application/json'</span>)// 注册响应函数r.onreadystatechange = <span class="function"><span class="title">function</span></span>() {    <span class="keyword">if</span> (r.readyState === 4) {        console.log(<span class="string">'state change'</span>, r, r.status, r.response)        <span class="built_in">let</span> response = JSON.parse(r.response)        console.log(<span class="string">'response'</span>, response)    } <span class="keyword">else</span> {        console.log(<span class="string">'change'</span>)    }}// 发送请求<span class="built_in">let</span> account = {    phone: <span class="string">'gua'</span>,    password: <span class="string">'123'</span>,}<span class="built_in">let</span> data = JSON.stringify(account)r.send(data)// 可以封装成这样的一个函数const ajax = (method, path, data, responseCallback) =&gt; {    // 发送登录数据    <span class="built_in">let</span> r = new XMLHttpRequest()    // 设置请求方法和请求地址    r.open(method, path, <span class="literal">true</span>)    // 设置发送的数据的格式    r.setRequestHeader(<span class="string">'Content-Type'</span>, <span class="string">'application/json'</span>)    // 注册响应函数    r.onreadystatechange = <span class="function"><span class="title">function</span></span>() {        <span class="keyword">if</span> (r.readyState === 4) {            // console.log(<span class="string">'state change'</span>, r, r.status, r.response)            // <span class="built_in">let</span> response = JSON.parse(r.response)            // console.log(<span class="string">'response'</span>, response)            responseCallback(r.response)        } <span class="keyword">else</span> {            console.log(<span class="string">'change'</span>)        }    }    r.send(data)}</code></pre>]]></content>
+    <content type="html"><![CDATA[<p>Mac中主要有四个修饰键，分别是Command，Control，Option和Shift。</p><h2 id="通用"><a href="#通用" class="headerlink" title="通用"></a>通用</h2><p>Command是Mac里最重要的修饰键，在大多数情况下相当于Windows下的Ctrl。<br>所以以下最基本操作很好理解：</p><ul><li><code>Command + Z</code> 撤销</li><li><code>Command + x</code> 剪切</li><li><code>Command + c</code> 拷贝</li><li><code>Command + v</code> 粘贴</li><li><code>Command + A</code> 全选（All）</li><li><code>Command + S</code> 保存（Save)</li><li><code>Command + F</code> 查找（Find）</li></ul><h2 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h2><ul><li><code>Command + Shift + 3</code> 截取全部屏幕到文件</li><li><code>Command + Shift + Control + 3</code> 截取全部屏幕到剪贴板</li><li><code>Command + Shift + 4</code> 截取所选屏幕区域到一个文件，或按空格键仅捕捉一个窗口</li><li><code>Command + Shift + Control + 3</code> 截取所选屏幕区域到剪贴板，或按空格键仅捕捉一个窗口</li></ul><h2 id="切换"><a href="#切换" class="headerlink" title="切换"></a>切换</h2><ul><li><code>Command + Tab</code> 在应用程序间切换</li><li><code>Command + Shift + Tab</code> 在应用程序间切换（反向）</li><li><code>Command + ~</code> 在各应用中的窗口间切换</li></ul><h2 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h2><ul><li><code>Command + L</code> 光标直接跳至地址栏</li><li><code>Command + Tab</code> 转向下一个标签页</li><li><code>Control + Shift + Tab</code> 转向上一个标签页</li><li><code>Command + '+'或'='</code> 放大页面</li><li><code>Command + '-'</code> 缩小页面</li></ul><h2 id="应用程序中"><a href="#应用程序中" class="headerlink" title="应用程序中"></a>应用程序中</h2><ul><li><code>Command + H</code> 隐藏（Hide）当前正在运行的应用程序窗口</li><li><code>Command + Option + H</code> 隐藏（Hide）其他应用程序窗口</li><li><code>Command + Q</code> 退出（Quit）最前面的应用程序</li><li><code>Command + Shift + Z</code> 重做，也就是撤销的逆向操作</li><li><code>Command + Tab</code> 在打开的应用程序列表中转到下一个最近使用的应用程序，相当于Windows中（Alt+Tab）</li><li><code>Command + Option + esc</code> 打开“强制退出”窗口，如果有应用程序无响应，可在窗口列表中选择强制退出</li></ul><h2 id="文本处理"><a href="#文本处理" class="headerlink" title="文本处理"></a>文本处理</h2><ul><li><code>Command + B</code> 切换所选文字粗体（Bold）显示</li><li><code>fn + Delete</code> 相当于PC全尺寸键盘上的Delete，也就是向后删除</li><li><code>fn + ↑</code> 向上滚动一页（Page Up）</li><li><code>fn + ↓</code> 向下滚动一页（Page Down）</li><li><code>fn + ←</code> 滚动至文稿开头（Home）</li><li><code>fn + →</code> 滚动至文稿末尾（End）</li><li><code>Command + →</code> 将光标移至当前行的行尾</li><li><code>Command + ←</code> 将光标移至当前行的行首</li><li><code>Command + ↓</code> 将光标移至文稿末尾</li><li><code>Command + ↑</code> 将光标移至文稿开头</li><li><code>Option + →</code> 将光标移至下一个单词的末尾</li><li><code>Option + ←</code> 将光标移至上一个单词的开头</li><li><code>Option + ←</code> 移至行或段落的开头</li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;// AJAX 和使用方法
-// ajax 就是浏览器提供的用 js 获取链接内容的 API
-// 可以理解为发送网络请求的标准库
-// 获取登录页面
-// 创建 AJAX 对象
-&lt;span class=&quot;built_in&quot;&gt;let
+        &lt;p&gt;Mac中主要有四个修饰键，分别是Command，Control，Option和Shift。&lt;/p&gt;
+&lt;h2 id=&quot;通用&quot;&gt;&lt;a href=&quot;#通用&quot; class=&quot;headerlink&quot; title=&quot;通用&quot;&gt;&lt;/a&gt;通用&lt;/h2&gt;&lt;p&gt;Command是Mac里最重要的修
       
     
     </summary>
     
     
+      <category term="mac" scheme="http://fffffabulous.github.io/categories/mac/"/>
     
-      <category term="AJAX" scheme="http://fffffabulous.github.io/tags/AJAX/"/>
     
-      <category term="封装" scheme="http://fffffabulous.github.io/tags/%E5%B0%81%E8%A3%85/"/>
+      <category term="mac" scheme="http://fffffabulous.github.io/tags/mac/"/>
     
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://fffffabulous.github.io/2019/12/06/hello-world/"/>
-    <id>http://fffffabulous.github.io/2019/12/06/hello-world/</id>
-    <published>2019-12-06T03:24:46.747Z</published>
-    <updated>2019-12-06T14:58:38.353Z</updated>
+    <title>函数防抖、函数节流</title>
+    <link href="http://fffffabulous.github.io/2019/01/06/hello-world/"/>
+    <id>http://fffffabulous.github.io/2019/01/06/hello-world/</id>
+    <published>2019-01-06T12:48:44.000Z</published>
+    <updated>2019-12-06T18:49:25.674Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo server</span></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo generate</span></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="函数防抖"><a href="#函数防抖" class="headerlink" title="函数防抖"></a>函数防抖</h2><pre><code>当调用函数 n 秒后，才会执行该动作，若在这 n 秒内又调用该函数则将取消前一次并重新计算执行时间</code></pre><h3 id="代码原理"><a href="#代码原理" class="headerlink" title="代码原理"></a>代码原理</h3><pre><code>设定一个全局变量保存定时器，事件触发时，判断定时器是否存在，存在时，消除定时器，不存在时，重新设定定时器，确保一段时间内，只存在一个定时器。</code></pre><h4 id="伪代码"><a href="#伪代码" class="headerlink" title="伪代码"></a>伪代码</h4><pre><code class="bash"><span class="keyword">function</span> <span class="function"><span class="title">_log</span></span>() {  console.log(<span class="string">'log'</span>)}<span class="keyword">function</span> _debounce(fn, delay) {  var timer = null  <span class="built_in">return</span> <span class="function"><span class="title">function</span></span>() {    timer &amp;&amp; clearTimeout(timer)    timer = setTimeout(<span class="function"><span class="title">function</span></span>() {      fn()    }, delay)  }}window.onresize = _debounce(_log, 1000)</code></pre><h2 id="函数节流"><a href="#函数节流" class="headerlink" title="函数节流"></a>函数节流</h2><pre><code>函数预先设定一个执行周期，当调用动作的时刻大于等于执行周期则执行该动作，然后进入下一个新周期</code></pre><h3 id="代码原理-1"><a href="#代码原理-1" class="headerlink" title="代码原理"></a>代码原理</h3><pre><code>定义一个时间周期，当调用动作频率小于定义的时间周期，则进入下一周期，不会频繁触发</code></pre><h4 id="伪代码-1"><a href="#伪代码-1" class="headerlink" title="伪代码"></a>伪代码</h4><pre><code class="bash"><span class="keyword">function</span> <span class="function"><span class="title">_log</span></span>() {  console.log(<span class="string">'log'</span>)}<span class="keyword">function</span> _throttle(method, duration) {  var begin = new Date()  <span class="built_in">return</span> <span class="function"><span class="title">function</span></span>() {    var _this = this,      _args = arguments,      current = new Date()    <span class="keyword">if</span> (current - begin &gt;= duration) {      method.apply(_this, _args)      begin = current    }  }}window.onresize = _throttle(_log, 1000)</code></pre>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+        &lt;h2 id=&quot;函数防抖&quot;&gt;&lt;a href=&quot;#函数防抖&quot; class=&quot;headerlink&quot; title=&quot;函数防抖&quot;&gt;&lt;/a&gt;函数防抖&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;当调用函数 n 秒后，才会执行该动作，若在这 n 秒内又调用该函数则将取消前一次并重新计算执行时间&lt;/cod
       
     
     </summary>
     
     
+      <category term="前端" scheme="http://fffffabulous.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="函数" scheme="http://fffffabulous.github.io/categories/%E5%89%8D%E7%AB%AF/%E5%87%BD%E6%95%B0/"/>
+    
+    
+      <category term="JavaScript" scheme="http://fffffabulous.github.io/tags/JavaScript/"/>
     
   </entry>
   
@@ -74,7 +76,7 @@
     <link href="http://fffffabulous.github.io/2018/11/06/code/"/>
     <id>http://fffffabulous.github.io/2018/11/06/code/</id>
     <published>2018-11-06T12:48:44.000Z</published>
-    <updated>2019-12-06T16:47:36.901Z</updated>
+    <updated>2019-12-06T17:58:23.648Z</updated>
     
     <content type="html"><![CDATA[<pre><code class="bash">// 查看是否存在秘钥$ <span class="built_in">cd</span> ~/.ssh// 配置用户相关信息$ git config –-global user.name ‘xxxxx’$ git config –-global user.email ‘xxx@xx.xxx’// 查看用户配置的相关信息$ git config user.name$ git config user.email// 生成秘钥 (邮箱为上方配置的邮箱)$ ssh-keygen -t rsa -C ‘xxx@xx.xxx’// 连按三个空格Generating public/private rsa key pair.Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/c/Users/Mr.Yang/.ssh/id_rsa):Enter passphrase (empty <span class="keyword">for</span> no passphrase):Enter same passphrase again:Your identification has been saved <span class="keyword">in</span> /c/Users/Mr.Yang/.ssh/id_rsa.Your public key has been saved <span class="keyword">in</span> /c/Users/Mr.Yang/.ssh/id_rsa.pub.The key fingerprint is:SHA256:zA6wNJrFB6NcqS6eBog/AHlzQuvFjYpG759Yhh1lWGI xxxxxx@xxxxx.xxx(上面自己的邮箱)The key<span class="string">"s randomart image is:</span><span class="string">+---[RSA 2048]----+</span><span class="string">|    +E .         |</span><span class="string">| ..+oo+          |</span><span class="string">| oo+*+.o         |</span><span class="string">|o.*===+o         |</span><span class="string">|==+*... S        |</span><span class="string">|B.+.o .o         |</span><span class="string">|++o. +  .        |</span><span class="string">| +o.+ .          |</span><span class="string">|.  o.o           |</span><span class="string">+----[SHA256]-----+</span></code></pre>]]></content>
     
@@ -93,8 +95,100 @@ $ git con
     </summary>
     
     
+      <category term="前端" scheme="http://fffffabulous.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
     
       <category term="SSH" scheme="http://fffffabulous.github.io/tags/SSH/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>javascript 原型链</title>
+    <link href="http://fffffabulous.github.io/2018/10/07/photo/"/>
+    <id>http://fffffabulous.github.io/2018/10/07/photo/</id>
+    <published>2018-10-06T19:30:05.000Z</published>
+    <updated>2019-12-06T20:35:57.904Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><pre><code>   每个对象都可以有一个原型_proto_，这个原型还可以有它自己的原型，以此类推，形成一个原型链。查找特定属性的时候，我们先去这个对象里去找，如果没有的话就去它的原型对象里面去，如果还是没有的话再去向原型对象的原型对象里去寻找...... 这个操作被委托在整个原型链上，这个就是我们说的原型链了。</code></pre><p><strong>prototype:</strong></p><pre><code class="bash">    prototype属性，它是函数所独有的，它是从一个函数指向一个对象。它的含义是函数的原型对象，也就是这个函数（其实所有函数都可以作为构造函数）所创建的实例的原型对象; 这个属性是一个指针，指向一个对象，这个对象的用途就是包含所有实例共享的属性和方法（我们把这个对象叫做原型对象</code></pre><p><strong><strong>_proto</strong>:</strong></p><pre><code class="bash">__proto__ 是原型链查询中实际用到的，它总是指向 prototype，换句话说就是指向构造函数的原型对象，它是对象独有的。注意，为什么Foo构造也有这个属性呢，因为再js的宇宙里万物皆对象，包括函数；</code></pre><p><strong>constructor:</strong></p><pre><code class="bash">每个函数都有一个原型对象，该原型对象有一个constructor属性，指向创建对象的函数本身。</code></pre><p><strong>结论:</strong><br>     1、<strong>_proto</strong> 是原型链查询中实际用到的，它总是指向 prototype；<br>     2、prototype 是函数所独有的，在定义构造函数时自动创建，它总是被 <strong>proto</strong> 所指。</p><p>所有对象都有<strong>proto</strong>属性，函数这个特殊对象除了具有<strong>proto</strong>属性，还有特有的原型属性prototype。prototype对象默认有两个属性，constructor属性和<strong>proto</strong>属性。prototype属性可以给函数和对象添加可共享（继承）的方法、属性，而<strong>proto</strong>是查找某函数或对象的原型链方式。constructor，这个属性包含了一个指针，指回原构造函数。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;原型链&quot;&gt;&lt;a href=&quot;#原型链&quot; class=&quot;headerlink&quot; title=&quot;原型链&quot;&gt;&lt;/a&gt;原型链&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;   每个对象都可以有一个原型_proto_，这个原型还可以有它自己的原型，
+以此类推，形成一个原型链。查找特定属性
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://fffffabulous.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="JavaScript" scheme="http://fffffabulous.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AJAX的使用与封装</title>
+    <link href="http://fffffabulous.github.io/2018/09/07/ajax/"/>
+    <id>http://fffffabulous.github.io/2018/09/07/ajax/</id>
+    <published>2018-09-06T17:01:19.000Z</published>
+    <updated>2019-12-06T17:57:52.631Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code class="bash">// AJAX 和使用方法// ajax 就是浏览器提供的用 js 获取链接内容的 API// 可以理解为发送网络请求的标准库// 获取登录页面// 创建 AJAX 对象<span class="built_in">let</span> r = new XMLHttpRequest()// 设置请求方法和请求地址r.open(<span class="string">'GET'</span>, <span class="string">'/login'</span>, <span class="literal">true</span>)// 注册响应函数r.onreadystatechange = <span class="function"><span class="title">function</span></span>() {    console.log(<span class="string">'state change'</span>, r)}// 发送请求r.send()// 发送登录数据<span class="built_in">let</span> r = new XMLHttpRequest()// 设置请求方法和请求地址r.open(<span class="string">'POST'</span>, <span class="string">'/api/user/login'</span>, <span class="literal">true</span>)// 设置发送的数据的格式r.setRequestHeader(<span class="string">'Content-Type'</span>, <span class="string">'application/json'</span>)// 注册响应函数r.onreadystatechange = <span class="function"><span class="title">function</span></span>() {    <span class="keyword">if</span> (r.readyState === 4) {        console.log(<span class="string">'state change'</span>, r, r.status, r.response)        <span class="built_in">let</span> response = JSON.parse(r.response)        console.log(<span class="string">'response'</span>, response)    } <span class="keyword">else</span> {        console.log(<span class="string">'change'</span>)    }}// 发送请求<span class="built_in">let</span> account = {    phone: <span class="string">'gua'</span>,    password: <span class="string">'123'</span>,}<span class="built_in">let</span> data = JSON.stringify(account)r.send(data)// 可以封装成这样的一个函数const ajax = (method, path, data, responseCallback) =&gt; {    // 发送登录数据    <span class="built_in">let</span> r = new XMLHttpRequest()    // 设置请求方法和请求地址    r.open(method, path, <span class="literal">true</span>)    // 设置发送的数据的格式    r.setRequestHeader(<span class="string">'Content-Type'</span>, <span class="string">'application/json'</span>)    // 注册响应函数    r.onreadystatechange = <span class="function"><span class="title">function</span></span>() {        <span class="keyword">if</span> (r.readyState === 4) {            // console.log(<span class="string">'state change'</span>, r, r.status, r.response)            // <span class="built_in">let</span> response = JSON.parse(r.response)            // console.log(<span class="string">'response'</span>, response)            responseCallback(r.response)        } <span class="keyword">else</span> {            console.log(<span class="string">'change'</span>)        }    }    r.send(data)}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;// AJAX 和使用方法
+// ajax 就是浏览器提供的用 js 获取链接内容的 API
+// 可以理解为发送网络请求的标准库
+// 获取登录页面
+// 创建 AJAX 对象
+&lt;span class=&quot;built_in&quot;&gt;let
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://fffffabulous.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="AJAX" scheme="http://fffffabulous.github.io/tags/AJAX/"/>
+    
+      <category term="封装" scheme="http://fffffabulous.github.io/tags/%E5%B0%81%E8%A3%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>冒泡排序 快速排序</title>
+    <link href="http://fffffabulous.github.io/2018/09/07/func/"/>
+    <id>http://fffffabulous.github.io/2018/09/07/func/</id>
+    <published>2018-09-06T17:01:19.000Z</published>
+    <updated>2019-12-06T19:29:19.617Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><p>冒泡排序（Bubble Sort），是一种计算机科学领域的较简单的排序算法。<br>它重复地走访过要排序的元素列，依次比较两个相邻的元素，如果顺序（如从大到小、首字母从从Z到A）错误就把他们交换过来。走访元素的工作是重复地进行直到没有相邻元素需要交换，也就是说该元素列已经排序完成。</p><pre><code class="bash"><span class="keyword">function</span> buddle_sort(arr) {  <span class="built_in">let</span> len = arr.length - 1  <span class="keyword">for</span> (<span class="built_in">let</span> j = 0; j &lt; len; j++) {    <span class="keyword">for</span> (<span class="built_in">let</span> i = 0; i &lt; len - j; i++) {      <span class="keyword">if</span> (arr[i] &gt; arr[i + 1]) {        [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]]      }    }  }}//对于冒泡排序来说，能不能传入第二个参数（参数为函数），来控制升序和降序？<span class="keyword">function</span> buddle_sort(arr, fn) {  <span class="built_in">let</span> len = arr.length  <span class="keyword">while</span> (len--) {    <span class="keyword">for</span> (<span class="built_in">let</span> i = 0; i &lt; len; i++) {      <span class="keyword">if</span> (fn(arr[i], arr[i + 1]) &gt; 0) {        [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]]      }    }  }}</code></pre><h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p>“快速排序”的思想很简单，整个排序过程只需要三步：</p><p>　　（1）在数据集之中，选择一个元素作为”基准”（pivot）。<br>　　（2）所有小于”基准”的元素，都移到”基准”的左边；所有大于”基准”的元素，都移到”基准”的右边。<br>　　（3）对”基准”左边和右边的两个子集，不断重复第一步和第二步，直到所有子集只剩下一个元素为止。</p><pre><code class="bash">const quickSort = (array) =&gt; {    // 如果数组不足两个元素, 直接返回    <span class="keyword">if</span> (array.length &lt; 2) {        <span class="built_in">return</span> array    }    // 找一个基准    <span class="built_in">let</span> pivot = array[0]    // 所有小于基准的放左边    <span class="built_in">let</span> left = array.filter(e =&gt; e &lt; pivot)    // 所有大于基准的放右边    <span class="built_in">let</span> right = array.filter(e =&gt; e &gt; pivot)    // 递归对 left 和 right 调用 quickSort 进行排序    <span class="built_in">return</span> quickSort(left).concat([pivot]).concat(quickSort(right))}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;冒泡排序&quot;&gt;&lt;a href=&quot;#冒泡排序&quot; class=&quot;headerlink&quot; title=&quot;冒泡排序&quot;&gt;&lt;/a&gt;冒泡排序&lt;/h2&gt;&lt;p&gt;冒泡排序（Bubble Sort），是一种计算机科学领域的较简单的排序算法。&lt;br&gt;它重复地走访过要排序的元素列，依次比较两
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://fffffabulous.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="封装" scheme="http://fffffabulous.github.io/tags/%E5%B0%81%E8%A3%85/"/>
+    
+      <category term="算法" scheme="http://fffffabulous.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="JavaScript" scheme="http://fffffabulous.github.io/tags/JavaScript/"/>
     
   </entry>
   
@@ -103,7 +197,7 @@ $ git con
     <link href="http://fffffabulous.github.io/2018/03/07/js/"/>
     <id>http://fffffabulous.github.io/2018/03/07/js/</id>
     <published>2018-03-06T16:51:20.000Z</published>
-    <updated>2019-12-06T17:00:01.302Z</updated>
+    <updated>2019-12-06T17:57:04.736Z</updated>
     
     <content type="html"><![CDATA[<pre><code class="bash">电脑通信靠IP地址，IP地址记不住就发明了域名（domain name），然后电脑自动向DNS服务器（domain name server）查询域名对应的IP地址比如g.cn这样的网址，可以通过电脑的ping程序查出对应 IP 地址➜    ping g.cnPING g.cn (203.208.41.55): 56 data bytes端口是什么？一个比喻：用邮局互相写信的时候，ip相当于地址（也可以看做邮编，地址是域名）端口是收信人姓名（因为一个地址比如公司、家只有一个地址，但是却可能有很多收信人）端口就是一个标记收信人的数字。端口是一个 16 位的数字，所以范围是 0-65535（2**16）安全程度：Linux &gt; Mac &gt;&gt; Windows,         iPhone &gt;&gt; Android——HTTP协议——一个传输协议，协议就是双方都遵守的规范。为什么叫超文本传输协议呢，因为收发的是文本信息。1，浏览器（客户端）按照规定的格式发送文本数据（请求）到服务器2，服务器解析请求，按照规定的格式返回文本数据（响应）到浏览器3，浏览器解析得到的数据（响应），并做相应处理请求和响应是一样的数据格式，分为 4 部分：1，请求行或者响应行2，Header（请求的 Header 中 Host 字段是必须的，其他都是可选）3，\r\n\r\n（连续两个换行回车符，用来分隔Header和Body）4，Body（可选）请求的格式，注意大小写（这是一个不包含Body的请求）：原始数据如下<span class="string">'GET / HTTP/1.1\r\nhost:g.cn\r\n\r\n'</span>打印出来如下GET / HTTP/1.1host: g.cn其中1， GET 是请求方法（还有POST等，这就是个标志字符串而已）2，/ 是请求的路径（这代表根路径）3，HTTP/1.1 中，1.1是版本号，通用了20年具体字符串是 <span class="string">'GET / HTTP/1.1\r\nhost:g.cn\r\n\r\n'</span>返回的数据(响应)如下HTTP/1.1 301 Moved PermanentlyAlternate-Protocol: 80:quic,p=0,80:quic,p=0Cache-Control: private, max-age=2592000Content-Length: 218Content-Type: text/html; charset=UTF-8Date: Tue, 07 Jul 2015 02:57:59 GMTExpires: Tue, 07 Jul 2015 02:57:59 GMTLocation: http://www.google.cn/Server: gwsX-Frame-Options: SAMEORIGINX-XSS-Protection: 1; mode=block</code></pre>]]></content>
     
@@ -120,6 +214,10 @@ $ git con
     </summary>
     
     
+      <category term="网络" scheme="http://fffffabulous.github.io/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="HTTP" scheme="http://fffffabulous.github.io/tags/HTTP/"/>
     
   </entry>
   

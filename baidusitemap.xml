@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://fffffabulous.github.io/2019/12/07/ajax/</loc>
+    <loc>http://fffffabulous.github.io/2018/10/07/photo/</loc>
     <lastmod>2019-12-06</lastmod>
   </url>  <url>
-    <loc>http://fffffabulous.github.io/2018/03/07/js/</loc>
+    <loc>http://fffffabulous.github.io/2019/04/07/my/</loc>
+    <lastmod>2019-12-06</lastmod>
+  </url>  <url>
+    <loc>http://fffffabulous.github.io/2018/09/07/func/</loc>
+    <lastmod>2019-12-06</lastmod>
+  </url>  <url>
+    <loc>http://fffffabulous.github.io/2019/01/06/hello-world/</loc>
     <lastmod>2019-12-06</lastmod>
   </url>  <url>
     <loc>http://fffffabulous.github.io/2018/11/06/code/</loc>
     <lastmod>2019-12-06</lastmod>
   </url>  <url>
-    <loc>http://fffffabulous.github.io/2019/12/06/hello-world/</loc>
+    <loc>http://fffffabulous.github.io/2018/09/07/ajax/</loc>
+    <lastmod>2019-12-06</lastmod>
+  </url>  <url>
+    <loc>http://fffffabulous.github.io/2018/03/07/js/</loc>
     <lastmod>2019-12-06</lastmod>
   </url>
 </urlset>
