@@ -348,7 +348,7 @@
   <article class="article article-links article-type-list" itemscope="">
   <header class="article-header">
     <h1 itemprop="title">书单</h1>
-    <p class="text-muted">个人收藏的书单推荐给大家 <a href="https://www.douban.com/people/120058256/" target="_blank">[我的豆瓣]</a></p>
+    <p class="text-muted">个人收藏的书单推荐给大家 <a href="https://www.douban.com/people/mythsman/" target="_blank">[我的豆瓣]</a></p>
     <nav role="navigation" id="nav-main" class="okayNav">
       <ul id="tabs">
         <li><a id="reading-tab" href="javascript:show(' target="_blank"reading')" rel="external noopener">在读<span id="reading-total"></span></a></li>
@@ -487,7 +487,7 @@ function show(id) {
   function loadDoubanCollections() {
     var _this = this;
     // https://api.douban.com/v2/book/user/:name/collections?start=0&count=100
-    var url = "https://api.douban.com/v2/book/user/120058256/collections"
+    var url = "https://api.douban.com/v2/book/user/mythsman/collections"
     $.ajax({
       url: url,
       type: 'GET',
