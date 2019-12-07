@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://fffffabulous.github.io/books/index.html</loc>
+    
+    <lastmod>2019-12-07T08:27:49.689Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://fffffabulous.github.io/%E5%89%8D%E7%AB%AF/event/</loc>
     
     <lastmod>2019-12-07T07:06:41.842Z</lastmod>
@@ -103,13 +110,6 @@
     <loc>http://fffffabulous.github.io/tags/index.html</loc>
     
     <lastmod>2019-12-06T14:31:39.425Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://fffffabulous.github.io/books/index.html</loc>
-    
-    <lastmod>2019-12-06T14:01:16.605Z</lastmod>
     
   </url>
   
