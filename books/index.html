@@ -492,8 +492,8 @@ function show(id) {
       url: url,
       type: 'GET',
       data: {
-        start:0, // 从哪一条记录开始
-        count:100 // 获取豆瓣书单数据条数
+        start:, // 从哪一条记录开始
+        count: // 获取豆瓣书单数据条数
       },
       dataType: 'JSONP', //here
       success: function(data) {
