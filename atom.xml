@@ -18,8 +18,8 @@
   
   <entry>
     <title>Mac系统常用快捷键</title>
-    <link href="http://fffffabulous.github.io/my/"/>
-    <id>http://fffffabulous.github.io/my/</id>
+    <link href="http://fffffabulous.github.io/mac/my/"/>
+    <id>http://fffffabulous.github.io/mac/my/</id>
     <published>2019-04-06T17:59:26.000Z</published>
     <updated>2019-12-06T20:17:44.100Z</updated>
     
@@ -45,8 +45,8 @@
   
   <entry>
     <title>函数防抖、函数节流</title>
-    <link href="http://fffffabulous.github.io/hello-world/"/>
-    <id>http://fffffabulous.github.io/hello-world/</id>
+    <link href="http://fffffabulous.github.io/%E5%89%8D%E7%AB%AF/%E5%87%BD%E6%95%B0/hello-world/"/>
+    <id>http://fffffabulous.github.io/%E5%89%8D%E7%AB%AF/%E5%87%BD%E6%95%B0/hello-world/</id>
     <published>2019-01-06T12:48:44.000Z</published>
     <updated>2019-12-06T18:49:25.674Z</updated>
     
@@ -73,8 +73,8 @@
   
   <entry>
     <title>git生成ssh秘钥</title>
-    <link href="http://fffffabulous.github.io/code/"/>
-    <id>http://fffffabulous.github.io/code/</id>
+    <link href="http://fffffabulous.github.io/%E5%89%8D%E7%AB%AF/code/"/>
+    <id>http://fffffabulous.github.io/%E5%89%8D%E7%AB%AF/code/</id>
     <published>2018-11-06T12:48:44.000Z</published>
     <updated>2019-12-06T17:58:23.648Z</updated>
     
@@ -104,8 +104,8 @@ $ git con
   
   <entry>
     <title>javascript 原型链</title>
-    <link href="http://fffffabulous.github.io/photo/"/>
-    <id>http://fffffabulous.github.io/photo/</id>
+    <link href="http://fffffabulous.github.io/%E5%89%8D%E7%AB%AF/photo/"/>
+    <id>http://fffffabulous.github.io/%E5%89%8D%E7%AB%AF/photo/</id>
     <published>2018-10-06T19:30:05.000Z</published>
     <updated>2019-12-06T20:35:57.904Z</updated>
     
@@ -131,8 +131,8 @@ $ git con
   
   <entry>
     <title>AJAX的使用与封装</title>
-    <link href="http://fffffabulous.github.io/ajax/"/>
-    <id>http://fffffabulous.github.io/ajax/</id>
+    <link href="http://fffffabulous.github.io/%E5%89%8D%E7%AB%AF/ajax/"/>
+    <id>http://fffffabulous.github.io/%E5%89%8D%E7%AB%AF/ajax/</id>
     <published>2018-09-06T17:01:19.000Z</published>
     <updated>2019-12-06T17:57:52.631Z</updated>
     
@@ -164,8 +164,8 @@ $ git con
   
   <entry>
     <title>冒泡排序 快速排序</title>
-    <link href="http://fffffabulous.github.io/func/"/>
-    <id>http://fffffabulous.github.io/func/</id>
+    <link href="http://fffffabulous.github.io/%E5%89%8D%E7%AB%AF/func/"/>
+    <id>http://fffffabulous.github.io/%E5%89%8D%E7%AB%AF/func/</id>
     <published>2018-09-06T17:01:19.000Z</published>
     <updated>2019-12-06T19:29:19.617Z</updated>
     
@@ -194,8 +194,8 @@ $ git con
   
   <entry>
     <title>HTTP</title>
-    <link href="http://fffffabulous.github.io/js/"/>
-    <id>http://fffffabulous.github.io/js/</id>
+    <link href="http://fffffabulous.github.io/%E7%BD%91%E7%BB%9C/js/"/>
+    <id>http://fffffabulous.github.io/%E7%BD%91%E7%BB%9C/js/</id>
     <published>2018-03-06T16:51:20.000Z</published>
     <updated>2019-12-06T17:57:04.736Z</updated>
     
