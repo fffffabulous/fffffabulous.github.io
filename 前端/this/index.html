@@ -17,15 +17,19 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>标签: AJAX | fffffabulous</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="fffffabulous">
-<meta property="og:url" content="http:&#x2F;&#x2F;fffffabulous.github.io&#x2F;tags&#x2F;AJAX&#x2F;index.html">
+  <title>javascript中的 this | fffffabulous</title>
+  <meta name="description" content="你可能遇到过这样的 JS 面试题： var obj &#x3D; {   foo: function(){     console.log(this)   } }  var bar &#x3D; obj.foo obj.foo() &#x2F;&#x2F; 打印出的 this 是 obj bar() &#x2F;&#x2F; 打印出的 this 是 window 请解释最后两行函数的值为什么不一样。 函数调用首先需要从函数的调用开始讲起。JS（ES5）里面">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript中的 this">
+<meta property="og:url" content="http:&#x2F;&#x2F;fffffabulous.github.io&#x2F;%E5%89%8D%E7%AB%AF&#x2F;this&#x2F;index.html">
 <meta property="og:site_name" content="fffffabulous">
+<meta property="og:description" content="你可能遇到过这样的 JS 面试题： var obj &#x3D; {   foo: function(){     console.log(this)   } }  var bar &#x3D; obj.foo obj.foo() &#x2F;&#x2F; 打印出的 this 是 obj bar() &#x2F;&#x2F; 打印出的 this 是 window 请解释最后两行函数的值为什么不一样。 函数调用首先需要从函数的调用开始讲起。JS（ES5）里面">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-07T06:39:28.690Z">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://fffffabulous.github.io/tags/AJAX/index.html">
+  <link rel="canonical" href="http://fffffabulous.github.io/%E5%89%8D%E7%AB%AF/this/index.html">
   
     <link rel="alternate" href="/atom.xml" title="fffffabulous" type="application/atom+xml">
   
@@ -341,74 +345,264 @@
 </aside>
 
   
-  <main class="main" role="main">
-  <article class="content article article-tags post-type-list" itemscope="">
-    <header class="article-header">
-      <h1 itemprop="name" class="hidden-xs">标签: AJAX</h1>
-      <p class="text-muted hidden-xs">共 1 篇文章</p>
-      <nav role="navigation" id="nav-main" class="okayNav">
-        <ul>
-          <li><a href="/tags">All</a></li>
-          
-          <li><a href="/tags/AJAX/">AJAX</a></li>
-          
-          <li><a href="/tags/封装/">封装</a></li>
-          
-          <li><a href="/tags/闭包/">闭包</a></li>
-          
-          <li><a href="/tags/SSH/">SSH</a></li>
-          
-          <li><a href="/tags/算法/">算法</a></li>
-          
-          <li><a href="/tags/JavaScript/">JavaScript</a></li>
-          
-          <li><a href="/tags/movie/">movie</a></li>
-          
-          <li><a href="/tags/photo/">photo</a></li>
-          
-          <li><a href="/tags/mac/">mac</a></li>
-          
-          <li><a href="/tags/HTTP/">HTTP</a></li>
-          
-          <li><a href="/tags/music/">music</a></li>
-          
-        </ul>
-      </nav>
-    </header>
-    <!-- /header -->
-    <div class="article-body">
-      <div class="row">
-        
-<div class="col-md-6">
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-this" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
-<article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2018-09-06T17:01:19.000Z" itemprop="datePublished">2018-09-07</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/%E5%89%8D%E7%AB%AF/ajax/">AJAX的使用与封装</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/AJAX/" class="label label-default mb">AJAX</a>
-     
-      <a href="/tags/%E5%B0%81%E8%A3%85/" class="label label-default mb">封装</a>
-     
-     
-   </div>
-   
-</article>
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      javascript中的 this
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/%E5%89%8D%E7%AB%AF/this/" class="article-date">
+	  <time datetime="2018-10-07T06:20:58.000Z" itemprop="datePublished">2018-10-07</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/JavaScript/" rel="tag">JavaScript</a>
+  </span>
 
 
-</div>
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
 
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/%E5%89%8D%E7%AB%AF/this/#comments" class="article-comment-link">评论</a></span>
+        
       </div>
     </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <p><strong>你可能遇到过这样的 JS 面试题：</strong></p>
+<pre><code class="bash">var obj = {
+  foo: <span class="function"><span class="title">function</span></span>(){
+    console.log(this)
+  }
+}
+
+var bar = obj.foo
+obj.foo() // 打印出的 this 是 obj
+bar() // 打印出的 this 是 window</code></pre>
+<p>请解释最后两行函数的值为什么不一样。</p>
+<h2 id="函数调用"><a href="#函数调用" class="headerlink" title="函数调用"></a>函数调用</h2><p>首先需要从函数的调用开始讲起。<br>JS（ES5）里面有三种函数调用形式：</p>
+<pre><code class="bash">func(p1, p2) 
+obj.child.method(p1, p2)
+func.call(context, p1, p2) // 先不讲 apply</code></pre>
+<p>一般，初学者都知道前两种形式，而且认为前两种形式「优于」第三种形式。<br>从看到这篇文章起，你一定要记住，第三种调用形式，才是正常调用形式：</p>
+<pre><code class="bash">func.call(context, p1, p2)</code></pre>
+<p>其他两种都是语法糖，可以等价地变为 call 形式：</p>
+<pre><code class="bash">func(p1, p2) 等价于
+func.call(undefined, p1, p2)
+
+obj.child.method(p1, p2) 等价于
+obj.child.method.call(obj.child, p1, p2)</code></pre>
+<p>请记下来。（我们称此代码为「转换代码」，方便下文引用）<br>至此我们的函数调用只有一种形式</p>
+<pre><code class="bash">func.call(context, p1, p2)</code></pre>
+<h2 id="这样，this-就好解释了"><a href="#这样，this-就好解释了" class="headerlink" title="这样，this 就好解释了"></a>这样，this 就好解释了</h2><p>this，就是上面代码中的 context。就这么简单。<br>this 是你 call 一个函数时传的 context，由于你从来不用 call 形式的函数调用，所以你一直不知道。</p>
+<p><strong>先看 func(p1, p2) 中的 this 如何确定：</strong><br>当你写下面代码时</p>
+<pre><code class="bash"><span class="keyword">function</span> <span class="function"><span class="title">func</span></span>(){
+  console.log(this)
+}
+func()</code></pre>
+<p>等价于</p>
+<pre><code class="bash"><span class="keyword">function</span> <span class="function"><span class="title">func</span></span>(){
+  console.log(this)
+}
+
+func.call(undefined) // 可以简写为 func.call()</code></pre>
+<p>按理说打印出来的 this 应该就是 undefined 了吧，但是浏览器里有一条规则：</p>
+<blockquote><p>如果你传的 context 就 null 或者 undefined，那么 window 对象就是默认的 context（严格模式下默认 context 是 undefined）</p>
+</blockquote>
+
+<p>因此上面的打印结果是 window。</p>
+<p>如果你希望这里的 this 不是 window，很简单：</p>
+<pre><code class="bash">func.call(obj) // 那么里面的 this 就是 obj 对象了</code></pre>
+<p><strong>再看 obj.child.method(p1, p2) 的 this 如何确定</strong></p>
+<pre><code class="bash">var obj = {
+  foo: <span class="function"><span class="title">function</span></span>(){
+    console.log(this)
+  }
+}
+obj.foo() </code></pre>
+<p>按照「转换代码」，我们将 obj.foo() 转换为</p>
+<pre><code class="bash">obj.foo.call(obj)</code></pre>
+<p>好了，this 就是 obj。搞定。</p>
+<p>回到题目：</p>
+<pre><code class="bash">var obj = {
+  foo: <span class="function"><span class="title">function</span></span>(){
+    console.log(this)
+  }
+}
+
+var bar = obj.foo
+obj.foo() // 转换为 obj.foo.call(obj)，this 就是 obj
+bar() 
+// 转换为 bar.call()
+// 由于没有传 context
+// 所以 this 就是 undefined
+// 最后浏览器给你一个默认的 this —— window 对象</code></pre>
+<h2 id="语法"><a href="#语法" class="headerlink" title="[ ] 语法"></a>[ ] 语法</h2><pre><code class="bash"><span class="keyword">function</span> <span class="function"><span class="title">fn</span></span> (){ console.log(this) }
+var arr = [fn, fn2]
+arr[0]() // 这里面的 this 又是什么呢？</code></pre>
+<p>我们可以把 arr<a href>0</a> 想象为arr.0( )，虽然后者的语法错了，但是形式与转换代码里的 obj.child.method(p1, p2) 对应上了，于是就可以愉快的转换了：</p>
+<pre><code class="bash">        arr[0]() 
+假想为    arr.0()
+然后转换为 arr.0.call(arr)
+那么里面的 this 就是 arr 了 :)</code></pre>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li>this 就是你 call 一个函数时，传入的第一个参数。（请务必背下来「this 就是 call 的第一个参数」）</li>
+<li>如果你的函数调用形式不是 call 形式，请按照「转换代码」将其转换为 call 形式。以后你遇到所有跟 this 有关的笔试题，都不会有疑问了。完。</li>
+</ol>
+<p>链接：<a href="https://zhuanlan.zhihu.com/p/23804247" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/23804247</a></p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://fffffabulous.github.io/%E5%89%8D%E7%AB%AF/this/" title="javascript中的 this" target="_blank" rel="external">http://fffffabulous.github.io/%E5%89%8D%E7%AB%AF/this/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/fffffabulous" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/fffffabulous" target="_blank"><span class="text-dark">fffffabulous</span><small class="ml-1x">Web Developer &amp; Designer</small></a></h3>
+        <div>个人简介。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
   </article>
-   
+  
+    
+  <section id="comments">
+  	
+           
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/%E5%89%8D%E7%AB%AF/code/" title="git生成ssh秘钥"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/%E5%89%8D%E7%AB%AF/photo/" title="javascript 原型链"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.jpg" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -463,6 +657,33 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+    
+  <!-- <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"> -->
+  <script src="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: 'bf7ee9d3734ce3680afb',
+    clientSecret: 'eaa70383a3b165f11b8dbc48ebf062201c98b255',
+    repo: 'fffffabulous.github.io',
+    owner: 'fffffabulous',
+    admin: ['fffffabulous'],
+    id: md5(location.pathname),
+    distractionFreeMode: true
+  })
+  gitalk.render('comments')
+  </script>
+
+      
 
 
 
