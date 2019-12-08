@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://fffffabulous.github.io/uncategorized/index/</loc>
+    
+    <lastmod>2019-12-08T08:08:25.341Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://fffffabulous.github.io/books/index.html</loc>
     
     <lastmod>2019-12-07T08:27:49.689Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://fffffabulous.github.io/%E5%89%8D%E7%AB%AF/bibao/</loc>
     
     <lastmod>2019-12-07T06:18:56.230Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://fffffabulous.github.io/uncategorized/index/</loc>
-    
-    <lastmod>2019-12-07T05:47:31.802Z</lastmod>
     
   </url>
   
