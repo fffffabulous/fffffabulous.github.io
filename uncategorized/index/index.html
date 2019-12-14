@@ -27,8 +27,8 @@ span {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    border-radius: 10px;
-    box-shadow: 0px 6px 7px #999;
+    border-radius: 15px;
+    box-shadow: 6px 6px 7px #999;
 }
 
 .class-div-picture {
@@ -436,7 +436,7 @@ const renderLyric = (result) => {
 const handleLyric = (line) => {
     let result = []
     let timeReg = /\[\d{2}:\d{2}.\d{2}\]/g
-    for (let i = 0; i < line.length; i++) {
+    for (let i = 1; i < line.length; i++) {
         let item = line[i]
         let time = item.match(timeReg)
         if (!time) {
