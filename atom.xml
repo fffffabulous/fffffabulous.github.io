@@ -245,6 +245,36 @@ $ git con
   </entry>
   
   <entry>
+    <title>冒泡排序 快速排序</title>
+    <link href="http://fffffabulous.github.io/%E5%89%8D%E7%AB%AF/func/"/>
+    <id>http://fffffabulous.github.io/%E5%89%8D%E7%AB%AF/func/</id>
+    <published>2018-09-06T17:01:19.000Z</published>
+    <updated>2019-12-06T19:29:19.617Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><p>冒泡排序（Bubble Sort），是一种计算机科学领域的较简单的排序算法。<br>它重复地走访过要排序的元素列，依次比较两个相邻的元素，如果顺序（如从大到小、首字母从从Z到A）错误就把他们交换过来。走访元素的工作是重复地进行直到没有相邻元素需要交换，也就是说该元素列已经排序完成。</p><pre><code class="bash"><span class="keyword">function</span> buddle_sort(arr) {  <span class="built_in">let</span> len = arr.length - 1  <span class="keyword">for</span> (<span class="built_in">let</span> j = 0; j &lt; len; j++) {    <span class="keyword">for</span> (<span class="built_in">let</span> i = 0; i &lt; len - j; i++) {      <span class="keyword">if</span> (arr[i] &gt; arr[i + 1]) {        [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]]      }    }  }}//对于冒泡排序来说，能不能传入第二个参数（参数为函数），来控制升序和降序？<span class="keyword">function</span> buddle_sort(arr, fn) {  <span class="built_in">let</span> len = arr.length  <span class="keyword">while</span> (len--) {    <span class="keyword">for</span> (<span class="built_in">let</span> i = 0; i &lt; len; i++) {      <span class="keyword">if</span> (fn(arr[i], arr[i + 1]) &gt; 0) {        [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]]      }    }  }}</code></pre><h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p>“快速排序”的思想很简单，整个排序过程只需要三步：</p><p>　　（1）在数据集之中，选择一个元素作为”基准”（pivot）。<br>　　（2）所有小于”基准”的元素，都移到”基准”的左边；所有大于”基准”的元素，都移到”基准”的右边。<br>　　（3）对”基准”左边和右边的两个子集，不断重复第一步和第二步，直到所有子集只剩下一个元素为止。</p><pre><code class="bash">const quickSort = (array) =&gt; {    // 如果数组不足两个元素, 直接返回    <span class="keyword">if</span> (array.length &lt; 2) {        <span class="built_in">return</span> array    }    // 找一个基准    <span class="built_in">let</span> pivot = array[0]    // 所有小于基准的放左边    <span class="built_in">let</span> left = array.filter(e =&gt; e &lt; pivot)    // 所有大于基准的放右边    <span class="built_in">let</span> right = array.filter(e =&gt; e &gt; pivot)    // 递归对 left 和 right 调用 quickSort 进行排序    <span class="built_in">return</span> quickSort(left).concat([pivot]).concat(quickSort(right))}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;冒泡排序&quot;&gt;&lt;a href=&quot;#冒泡排序&quot; class=&quot;headerlink&quot; title=&quot;冒泡排序&quot;&gt;&lt;/a&gt;冒泡排序&lt;/h2&gt;&lt;p&gt;冒泡排序（Bubble Sort），是一种计算机科学领域的较简单的排序算法。&lt;br&gt;它重复地走访过要排序的元素列，依次比较两
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://fffffabulous.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="JavaScript" scheme="http://fffffabulous.github.io/tags/JavaScript/"/>
+    
+      <category term="算法" scheme="http://fffffabulous.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="封装" scheme="http://fffffabulous.github.io/tags/%E5%B0%81%E8%A3%85/"/>
+    
+  </entry>
+  
+  <entry>
     <title>AJAX的使用与封装</title>
     <link href="http://fffffabulous.github.io/%E5%89%8D%E7%AB%AF/ajax/"/>
     <id>http://fffffabulous.github.io/%E5%89%8D%E7%AB%AF/ajax/</id>
@@ -271,39 +301,9 @@ $ git con
       <category term="前端" scheme="http://fffffabulous.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
+      <category term="封装" scheme="http://fffffabulous.github.io/tags/%E5%B0%81%E8%A3%85/"/>
+    
       <category term="AJAX" scheme="http://fffffabulous.github.io/tags/AJAX/"/>
-    
-      <category term="封装" scheme="http://fffffabulous.github.io/tags/%E5%B0%81%E8%A3%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>冒泡排序 快速排序</title>
-    <link href="http://fffffabulous.github.io/%E5%89%8D%E7%AB%AF/func/"/>
-    <id>http://fffffabulous.github.io/%E5%89%8D%E7%AB%AF/func/</id>
-    <published>2018-09-06T17:01:19.000Z</published>
-    <updated>2019-12-06T19:29:19.617Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><p>冒泡排序（Bubble Sort），是一种计算机科学领域的较简单的排序算法。<br>它重复地走访过要排序的元素列，依次比较两个相邻的元素，如果顺序（如从大到小、首字母从从Z到A）错误就把他们交换过来。走访元素的工作是重复地进行直到没有相邻元素需要交换，也就是说该元素列已经排序完成。</p><pre><code class="bash"><span class="keyword">function</span> buddle_sort(arr) {  <span class="built_in">let</span> len = arr.length - 1  <span class="keyword">for</span> (<span class="built_in">let</span> j = 0; j &lt; len; j++) {    <span class="keyword">for</span> (<span class="built_in">let</span> i = 0; i &lt; len - j; i++) {      <span class="keyword">if</span> (arr[i] &gt; arr[i + 1]) {        [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]]      }    }  }}//对于冒泡排序来说，能不能传入第二个参数（参数为函数），来控制升序和降序？<span class="keyword">function</span> buddle_sort(arr, fn) {  <span class="built_in">let</span> len = arr.length  <span class="keyword">while</span> (len--) {    <span class="keyword">for</span> (<span class="built_in">let</span> i = 0; i &lt; len; i++) {      <span class="keyword">if</span> (fn(arr[i], arr[i + 1]) &gt; 0) {        [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]]      }    }  }}</code></pre><h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p>“快速排序”的思想很简单，整个排序过程只需要三步：</p><p>　　（1）在数据集之中，选择一个元素作为”基准”（pivot）。<br>　　（2）所有小于”基准”的元素，都移到”基准”的左边；所有大于”基准”的元素，都移到”基准”的右边。<br>　　（3）对”基准”左边和右边的两个子集，不断重复第一步和第二步，直到所有子集只剩下一个元素为止。</p><pre><code class="bash">const quickSort = (array) =&gt; {    // 如果数组不足两个元素, 直接返回    <span class="keyword">if</span> (array.length &lt; 2) {        <span class="built_in">return</span> array    }    // 找一个基准    <span class="built_in">let</span> pivot = array[0]    // 所有小于基准的放左边    <span class="built_in">let</span> left = array.filter(e =&gt; e &lt; pivot)    // 所有大于基准的放右边    <span class="built_in">let</span> right = array.filter(e =&gt; e &gt; pivot)    // 递归对 left 和 right 调用 quickSort 进行排序    <span class="built_in">return</span> quickSort(left).concat([pivot]).concat(quickSort(right))}</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;冒泡排序&quot;&gt;&lt;a href=&quot;#冒泡排序&quot; class=&quot;headerlink&quot; title=&quot;冒泡排序&quot;&gt;&lt;/a&gt;冒泡排序&lt;/h2&gt;&lt;p&gt;冒泡排序（Bubble Sort），是一种计算机科学领域的较简单的排序算法。&lt;br&gt;它重复地走访过要排序的元素列，依次比较两
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="http://fffffabulous.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="JavaScript" scheme="http://fffffabulous.github.io/tags/JavaScript/"/>
-    
-      <category term="封装" scheme="http://fffffabulous.github.io/tags/%E5%B0%81%E8%A3%85/"/>
-    
-      <category term="算法" scheme="http://fffffabulous.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
