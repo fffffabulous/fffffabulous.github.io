@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://fffffabulous.github.io/music/index/</loc>
+    
+    <lastmod>2020-08-16T13:19:24.618Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://fffffabulous.github.io/%E7%94%B5%E5%BD%B1%F0%9F%8E%AC/movie/</loc>
     
     <lastmod>2020-06-02T01:25:17.618Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://fffffabulous.github.io/books/index.html</loc>
     
     <lastmod>2020-06-02T01:05:33.275Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://fffffabulous.github.io/music/index/</loc>
-    
-    <lastmod>2019-12-24T08:48:28.316Z</lastmod>
     
   </url>
   
