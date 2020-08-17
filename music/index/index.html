@@ -450,7 +450,7 @@ const transFloatToTime = (floatNum) => {
             };
             const handleLyric = (line) => {
                 let result = []
-                let timeReg = /\[\d{2}:\d{2}.\d{2}\]/g
+                let timeReg = /^\[+[0-2][0-4]:[0-6][0-9]\.[0-9][0-9]+]/
                 for (let i = 0; i < line.length; i++) {
                     let item = line[i]
                     let time = item.match(timeReg)
