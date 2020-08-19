@@ -682,19 +682,22 @@ const transFloatToTime = (floatNum) => {
             };
 
             const bindLyrcButtonEvent = () => {
-                let lyrcButton = e(".class-span-lyrics")
-                let lyrcDiv = e(".class-div-lyricView")
-                bindEvent(lyrcButton, "click", function (event) {
-                    let self = event.target
-                    if (self.style.color === "grey") {
-                        self.style.color = "black"
-                        lyrcDiv.style.display = "block"
-                    } else {
-                        self.style.color = "grey"
-                        lyrcDiv.style.display = "none"
-                    }
-                })
-            };
+                    let lyrcButton = e(".class-span-lyrics")
+                    let lyrcBackgroud = e(".class-div-musicLyric")
+                    let lyrcDiv = e(".class-div-lyricView")
+                    bindEvent(lyrcButton, "click", function (event) {
+                        let self = event.target
+                        if (self.style.color === "grey") {
+                            self.style.color = "black"
+                            lyrcBackgroud.style.background = 'rgba(100, 100, 100, 0.9)'
+                            lyrcDiv.style.display = "block"
+                        } else {
+                            self.style.color = "grey"
+                            lyrcBackgroud.style.background = 'rgba(0, 0, 0, 0)'
+                            lyrcDiv.style.display = "none"
+                        }
+                    })
+                };
 
             const bindEvents = () => {
                 bindMusicCanPlayEvent()
